@@ -1,0 +1,7 @@
+3 questa linea compare 3 volte nel file f1.
+3 questa linea compare 3 volte nel file f1.
+3 questa linea compare 3 volte nel file f1.
+1 questa linea compare 1 volta nel file f1.
+2 questa linea compare 2 volte nel file f1.
+2 questa linea compare 2 volte nel file f1.
+

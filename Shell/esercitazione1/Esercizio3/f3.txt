@@ -1,0 +1,4 @@
+3 questa linea compare 3 volte nel file f3.
+3 questa linea compare 3 volte nel file f3.
+3 questa linea compare 3 volte nel file f3.
+1 questa linea compare 1 volta nel file f3.

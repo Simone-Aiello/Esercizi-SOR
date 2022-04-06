@@ -1,0 +1,2 @@
+simone:x:1000:1000:,,,:/home/simone:/bin/bash
+syslog:x:104:110::/home/syslog:/usr/sbin/nologin
