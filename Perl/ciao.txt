@@ -1,0 +1,9 @@
+EsercitazioneGuidata
+Esercizi
+Log
+Regex
+ciao.txt
+esecuzioneComandiShell.pl
+helloWorld.pl
+primoScript.pl
+testo.txt

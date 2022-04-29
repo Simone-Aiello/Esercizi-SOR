@@ -1,0 +1,40 @@
+desktop-3mipdn9
+    description: Computer
+    width: 64 bits
+    capabilities: smp
+  *-core
+       description: Motherboard
+       physical id: 0
+     *-memory
+          description: System memory
+          physical id: 0
+          size: 15GiB
+     *-cpu
+          product: Intel(R) Core(TM) i7-9700K CPU @ 3.60GHz
+          vendor: Intel Corp.
+          physical id: 1
+          bus info: cpu@0
+          capacity: 3600MHz
+          width: 64 bits
+          capabilities: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp x86-64 pni pclmulqdq dtes64 est tm2 ssse3 fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt aes xsave osxsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt ibrs ibpb stibp ssbd cpufreq
+  *-network:0
+       description: Ethernet interface
+       physical id: 1
+       logical name: eth0
+       serial: e0:d5:5e:6d:7c:65
+       capabilities: ethernet physical
+       configuration: broadcast=yes ip=192.168.0.12 multicast=yes
+  *-network:1
+       description: Ethernet interface
+       physical id: 2
+       logical name: eth2
+       serial: 00:15:5d:95:70:79
+       capabilities: ethernet physical
+       configuration: broadcast=yes ip=172.30.64.1 multicast=yes
+  *-network:2
+       description: Ethernet interface
+       physical id: 3
+       logical name: eth3
+       serial: 00:15:5d:b6:1c:94
+       capabilities: ethernet physical
+       configuration: broadcast=yes ip=172.18.112.1 multicast=yes
