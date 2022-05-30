@@ -1,0 +1,35 @@
+***********************************CALCOLO MASCHERE*************************************
+Calcoliamo le maschere necessarie per contenere il numero di indirizzi ip che ci servono
+
+CD1 DMZ 236 IP: 2^8 = 256 >= 236 + 2 ----> Mask = 32-8 = 24
+CD2 - 2 IP : Mask = 30
+CD3 - 2 IP : Mask = 30
+CD4 - 2 IP : Mask = 30
+CD5 RED 330 IP: 2^9 = 512 >= 330 + 2 ----> Mask = 32 - 9 = 23
+CD6 RED 58 IP : 2^6 = 64 >= 58 + 2 ------> Mask = 32 - 6 = 26
+CD9 GREEN 37 IP: 2^6 = 64 >= 37 + 2 ------> Mask = 32 - 6 = 26
+CD10 GREEN 332 IP:2^9 = 512 >= 332 + 2 ----> Mask = 32 - 9 = 23
+TAP - 2 IP: Mask = 30
+***********************************ACCORPAMENTO AREE************************************
+Accorpiamo i domini di collisione dello stesso tipo e sotto lo stesso router perché la 
+divisione all'esterno deve essere completamente trasparente
+
+CD_DMZ essendo unica rimane tale: Mask = 24
+
+CD_GREEN (CD9 e CD10): Mask = min(26,23) - 1 = 22
+
+CD_RED (CD5 e CD6): Mask = min(23,26) - 1 = 22
+
+*********************ORDINARE AREE ACCORPATE PER NUMERO DI MASCHERA*******************
+Ordiniamo le aree in ordine crescente per numero di maschera
+
+CD_RED: 22
+CD5 RED 330 IP ----> Mask = 23
+CD6 RED 58 IP -----> Mask = 26
+
+CD_GREEN: 22
+CD10 GREEN 332 IP ----> Mask = 23
+CD9 GREEN 37 IP ------> Mask = 26
+
+CD_DMZ: 24
+CD1 DMZ 236 IP ----> Mask = 24

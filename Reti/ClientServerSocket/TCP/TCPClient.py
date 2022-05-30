@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 from socket import *
 
-serverName = "192.168.56.1"
+serverName = "172.25.174.241"
 serverPort = 6789
 
 #AF_INET = voglio ipv4 AF_INET6 se volessi ipv6

@@ -1,0 +1,9 @@
+? (192.168.1.18) associato a 00:08:74:4C:7F:1D [ether] su enp1s0
+? (192.168.1.113) associato a <incompleto> su enp1s0
+? (192.168.1.130) associato a <incompleto> su enp1s0
+? (192.168.1.4) associato a <incompleto> su enp1s0
+? (192.168.1.99) associato a 13:45:74:2E:7F:1C [ether] su enp1s0
+? (192.168.1.117) associato a <incompleto> su enp1s0
+? (192.168.1.107) associato a 19:21:12:EE:6F:7A [ether] su enp1s0
+? (172.21.130.218) associato a 00:15:5d:e0:1d:2c [ether] su enp1s0
+? (127.0.0.1) associato a 00:00:00:00:00:00 [ether] su enp1s0

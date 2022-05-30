@@ -1,0 +1,60 @@
+Formula per trovare la maschera (da 32 bit) da assegnare: 2^X >= minIP + 2(network e broadcast)
+
+Mettere in ordine i domini di collisione:
+Nome dominio tipologia rete numero minimo indirizzi
+
+
+CD1 GREEN 133
+Calcolo Maschera: 2^X >= 133 + 2 --> 2^X >= 135 --> X = 8 --> Mask = 32-8 = 24
+
+CD2 2 Calcolo Maschera: 30
+CD4 2 Calcolo Maschera: 30
+CD5 2 Calcolo Maschera: 30
+TAP: 2 (sarebbe la connessione verso internet e lo consideriamo come dominio di collisione) Calcolo Maschera: 30
+
+CD6 RED: 176 Calcolo Maschera: 24
+CD7 RED: 363 Calcolo Maschera: 23
+
+CD8 DMZ: 239 Calcolo Maschera: 24
+CD9 DMZ: 105 Calcolo Maschera: 25
+
+Ora dobbiamo accorpare le aree simili sotto lo stesso router 
+perché questa divisione all'esterno deve essere trasparente
+
+Da noi RED e DMZ possono essere accorpate (la GREEN è già unica)
+
+
+----------------------DA NON FARE---------------------
+CD6_7 (RED) = 176+363 = 539 e poi calcoli la maschera
+------------------------------------------------------
+
+----------------------DA FARE-------------------------
+CD6_7 (RED) = min(maschera(CD6),maschera(CD7)) - 1 ---> min(24,23) -1 = 22 NON FUNZIONA SEMPRE
+
+QUESTA FUNZIONA SEMPRE
+    VEDI PNG AlberoMaschere e Maschera3Domini
+
+------------------------------------------------------
+
+
+Accorpiamo
+CD_GREEN rimane tale (è una sola)
+
+CD_RED: 22
+
+CD_DMZ: accorpiamo 24 e 25 --> min(24,25) - 1 = 23
+
+
+Ora ordiniamoli in base alle maschere (crescente)
+
+CD_RED: 22
+CD7 RED: 363 Calcolo Maschera: 23
+CD6 RED: 176 Calcolo Maschera: 24
+
+CD_DMZ: accorpiamo 24 e 25 --> min(24,25) - 1 = 23
+CD8 DMZ: 239 Calcolo Maschera: 24
+CD9 DMZ: 105 Calcolo Maschera: 25
+
+CD_GREEN
+CD1 GREEN 133: maschera 24
+

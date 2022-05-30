@@ -5,7 +5,7 @@ serverPort = 6789
 welcomeSocket = socket()
  
 # La stringa vuota '' vuol dire TUTTE le interfacce di rete, altrimenti si mette l'ip che vogliamo 
-welcomeSocket.bind(('',serverPort))
+welcomeSocket.bind(('172.25.167.218',serverPort))
 
 #Creo buffere delle connessioni
 welcomeSocket.listen(5) #Il 5 sono le connessioni che posso bufferizzare (client in parallelo che si possono gestire), la sesta non viene accettata
